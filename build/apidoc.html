@@ -1,0 +1,170 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/substack/accountdown"
+
+    >accountdown (v4.1.0)</a>
+</h1>
+<h4>persistent accounts backed to leveldb</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.accountdown">module accountdown</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.accountdown.accountdown">
+            function <span class="apidocSignatureSpan"></span>accountdown
+            <span class="apidocSignatureSpan">(db, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.accountdown.toString">
+            function <span class="apidocSignatureSpan">accountdown.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.accountdown.toString">module accountdown.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.accountdown.toString.toString">
+            function <span class="apidocSignatureSpan">accountdown.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.accountdown" id="apidoc.module.accountdown">module accountdown</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.accountdown.accountdown" id="apidoc.element.accountdown.accountdown">
+        function <span class="apidocSignatureSpan"></span>accountdown
+        <span class="apidocSignatureSpan">(db, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Account(db, opts) {
+    var self = this;
+    if (!(this instanceof Account)) return new Account(db, opts);
+    if (!opts) opts = {};
+
+    this._db = defaults(db, {
+        keyEncoding: bytewise,
+        valueEncoding: opts.valueEncoding || &#x27;json&#x27;
+    });
+
+    this._logins = opts.login || {};
+    Object.keys(opts.login || {}).forEach(function (key) {
+        var lg = opts.login[key];
+        self._logins[key] = lg(self._db, [ &#x27;login&#x27;, key ]);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.accountdown.toString" id="apidoc.element.accountdown.toString">
+        function <span class="apidocSignatureSpan">accountdown.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.accountdown.toString" id="apidoc.module.accountdown.toString">module accountdown.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.accountdown.toString.toString" id="apidoc.element.accountdown.toString.toString">
+        function <span class="apidocSignatureSpan">accountdown.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
